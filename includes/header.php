@@ -12,3 +12,7 @@
 
 </head>
 <body>
+<?php require_once 'config.php';
+require_once './includes/public_functions.php';
+session_start();
+?>

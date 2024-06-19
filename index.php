@@ -2,10 +2,8 @@
 
 
 <!--navbar-->
-<?php include( './includes/navbar.php');
-session_start();?>
-<?php require_once 'config.php';
-require_once './includes/public_functions.php';
+<?php include( './includes/navbar.php'); ?>
+<?php
 $posts = getNewPosts();
 foreach ($posts as $post):
 ?>
@@ -18,7 +16,7 @@ foreach ($posts as $post):
     <div class="card-body">
         <h5 class="card-title"><?php echo $post['title'] ?></h5>
         <p class="card-text"><?php echo $post['body'] ?></p>
-        <a href="single_post.php?slug=<?php echo $post['slug'] ?>" class="btn btn-primary">Go somewhere</a>
+        <a href="single_post.php?slug=<?php echo $post['slug'] ?>" class="btn btn-primary">Go to post</a>
     </div>
     <div class="card-footer text-body-secondary">
         <?php echo $post['created_at'] ?>
