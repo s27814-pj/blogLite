@@ -2,7 +2,7 @@
 
 
 
-<?php include( './includes/navbar.php');
+<?php
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 }
 
+include( './includes/navbar.php');
+
 //else header('Location: login.php?noAccess=1');
 if (isset($_SESSION['currentUser'])){
 echo $_SESSION['currentUser']['username'];
@@ -26,14 +28,14 @@ echo $_SESSION['currentUser']['username'];
 ?>
 
 
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
+    <div class="accordion " id="accordionExample">
+        <div class="accordion-item ">
             <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     Change <?php if($_SESSION['currentUser']['role'] != "Admin") echo "Your"?> password
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <form action="actions.php" method="post">
                         <div class="mb-3">
@@ -56,11 +58,11 @@ echo $_SESSION['currentUser']['username'];
         <?php if (($_SESSION['currentUser']['role']== "Author") || (($_SESSION['currentUser']['role']== "Admin"))){ ?>
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     Add post
                 </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="collapseTwo" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <form action="actions.php" method="post" enctype="multipart/form-data">
                         <div class="mb-3">
@@ -86,11 +88,11 @@ echo $_SESSION['currentUser']['username'];
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                     Delete post
                 </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="collapseThree" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <form action="actions.php" method="post">
                     <select class="form-select" multiple aria-label="Multiple select example" name="postId">
@@ -110,11 +112,11 @@ echo $_SESSION['currentUser']['username'];
 
             <div class="accordion-item">
             <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                     Edit body of post
                 </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="collapseFour" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <form action="actions.php" method="post">
                     <select class="form-select" multiple aria-label="Multiple select example" name="postId">
@@ -141,13 +143,13 @@ echo $_SESSION['currentUser']['username'];
 
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        <button class="accordion-button collapsed bg-dark text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             Check logs
                         </button>
                     </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div id="collapseFive" class="accordion-collapse collapse bg-dark text-white" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <table class="table">
+                            <table class="table bg-dark text-white">
                                 <thead>
                                 <tr>
                                     <th scope="col">Post id</th>

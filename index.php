@@ -9,7 +9,7 @@ foreach ($posts as $post):
 ?>
 
 
-<div class="card text-center">
+<div class="card text-center bg-dark text-white">
     <div class="card-header">
         <?php echo $post['header'] ?>
     </div>
@@ -21,42 +21,13 @@ foreach ($posts as $post):
     <div class="card-footer text-body-secondary">
         <?php echo $post['created_at'] ?>
     </div>
-    <img src="<?php echo $post['image'] ?>" class="card-img-bottom" alt="...">
+    <img src="<?php echo $post['image'] ?>" class="card-img-bottom" alt="..."style="max-height: 60vh;width: auto; margin-left: auto; margin-right: auto">
 
 </div>
 
 <?php endforeach ?>
 
 
-<div class="card text-center">
-    <div class="card-header">
-        Featured
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-footer text-body-secondary">
-        2 days ago
-    </div>
-    <img src="https://lds-img.finalfantasyxiv.com/promo/h/e/zADePMzBSPsaZMvfM6PIWMeoME.jpg" class="card-img-bottom" alt="...">
-
-</div>
-
-<div class="card text-center">
-    <div class="card-header">
-        Featured
-    </div>
-    <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional contentWith supporting text below as a natural lead-in to additional contentWith supporting text below as a natural lead-in to additional contentWith supporting text below as a natural lead-in to additional contentWith supporting text below as a natural lead-in to additional contentWith supporting text below as a natural lead-in to additional contentWith supporting text below as a natural lead-in to additional contentWith supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-    <div class="card-footer text-body-secondary">
-        2 days ago
-    </div>
-</div>
 
 
 <?php include( './includes/footer.php')?>

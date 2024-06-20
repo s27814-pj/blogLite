@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     ?>
-<div class="card text-center">
+<div class="card text-center bg-dark text-white">
     <div class="card-header">
         <?php echo $post['header'] ?>
     </div>
@@ -36,12 +36,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </div>
 
-<ol class="list-group list-group">
+<div class="callout">Contact author via email = <?php echo getEmailByUserid($post['user_id']); ?></div>
+
+
+
+
+<ol class="list-group list-group ">
 
         <?php
         $comments = getNewComments($post['id']);
         foreach ($comments as $comment): ?>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
+            <li class="list-group-item d-flex justify-content-between align-items-start bg-dark text-white">
                 <div class="ms-2 me-auto">
                     <div class="fw-bold"><?php echo $comment['username'] ?></div>
                     <?php echo $comment['body'] ?>
@@ -58,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <form method="post" action="single_post.php?slug=<?php echo $post['slug'] ?>">
         <div class="form-floating">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="comment" required></textarea>
+            <textarea class="form-control bg-dark text-white" placeholder="Leave a comment here" id="floatingTextarea" name="comment" required></textarea>
             <label for="floatingTextarea">Comment</label>
         </div>
         <button type="submit" class="btn btn-primary">Add comment</button>

@@ -22,8 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $target_file="";
 
             if ($_FILES["fileToUpload"]["size"] != 0) {
-                echo "jestem";
-                echo $_FILES["fileToUpload"]["size"];
 
             $target_dir = "uploads/";
             $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
